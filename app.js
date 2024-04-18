@@ -6,3 +6,4 @@ app.get("/",(req,res)=>{
 app.listen(1000,()=>{
     console.log(" server has started on port 1000 ")
 })
+))))
