@@ -1,105 +1,88 @@
-<!-- 
-    <h1>tHIS IS home page in ejs </h1>
-    <h2><%- data.name %></h2>
--->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Navigation bar styles */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-
-        nav {
-            display: inline-block;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        /* Card container styles */
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-            margin-top: 50px; /* Adjust as needed */
-        }
-
-        .card {
-            width: 300px;
-            padding: 20px;
-            margin: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .card h2 {
-            color: #333;
-        }
-
-        /* Footer styles */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    .navbar {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+    }
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .card {
+        width: 300px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+    }
+    .footer p {
+        margin: 0;
+        font-size: 14px;
+    }
+</style>
 </head>
-
 <body>
 
-    <header>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-
-    <div class="card-container">
-        <div class="card">
-            <h2>Card 1</h2>
-            <p>This is a sample card. You can add any content here.</p>
-        </div>
-        <div class="card">
-            <h2>Card 2</h2>
-            <p>Another sample card. Customize this as needed for your site.</p>
-        </div>
-        <div class="card">
-            <h2>Card 3</h2>
-            <p>One more card example. Feel free to modify the styles and content.</p>
-        </div>
+<%- include('./navbar') %>
+<div class="container">
+    <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+        <h2>Card 1</h2>
+        <p>This is a simple card with some content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="/blog">Read More</a>
     </div>
+    <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+        <h2>Card 2</h2>
+        <p>This is another card with different content. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+        <h2>Card 3</h2>
+        <p>Yet another card with its own content. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+</div>
 
-    <footer>
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
-    </footer>
+<%- include('./footer') %>
 
 </body>
-
 </html>
