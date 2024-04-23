@@ -1,6 +1,7 @@
 const express= require('express')
 const app=express()
 
+require("./model/index");
 app.set("view engine","ejs") //view engine of our project is set to ejs so our ui will be rendered through ejs
 app.get("/",(req,res)=>{
     res.render("home")
